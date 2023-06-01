@@ -108,4 +108,16 @@ function Validation(){
         document.getElementById(spanID).style.display = "block";
         return false;
     }
+
+    this.checkChucVu = function(value, spanID, message){
+        if(value === 'Sếp' || value === 'Trưởng phòng' || value === 'Nhân viên'){
+            document.getElementById(spanID).innerHTML = "";
+            document.getElementById(spanID).style.display = "none";
+            
+            return true;
+        }
+        document.getElementById(spanID).innerHTML = message;
+        document.getElementById(spanID).style.display = "block";
+        return false;
+    }
 }

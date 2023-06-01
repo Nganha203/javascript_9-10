@@ -44,6 +44,9 @@ document.getElementById('btnThemNV').onclick =
         // Luong
         isValid &= validation.checkEmty(luongcb, "tbLuongCB", "Lương cơ bản không được để trống") && validation.checkLuongCB(luongcb, "tbLuongCB", "Lương cơ bản không hợp lệ");
 
+        // Chuc vu
+        isValid &= validation.checkChucVu(chucvu, "tbChucVu", "Chức vụ không hợp lệ");
+
         // Time
         isValid &= validation.checkEmty(giolam, "tbGiolam", "Giờ làm không được để trống") && validation.checkTime(giolam, "tbGiolam", "Giờ làm không hợp lệ");
 
@@ -73,7 +76,7 @@ function HienThi(mang) {
             <td>${nv.xepLoai}</td>
             <td>
                 <button class="btn btn-danger" onclick="Xoa('${nv.taikhoan}')"  >Xóa</button>
-                <button class="btn btn-success" onclick="XemThongTin('${nv.taikhoan}')" >Xem</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="XemThongTin('${nv.taikhoan}')" >Xem</button>
             </td>
         </tr>`;
         content += trSV;
