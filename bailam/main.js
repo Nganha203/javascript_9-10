@@ -27,19 +27,19 @@ document.getElementById('btnThemNV').onclick =
 
         var isValid = true;
         // Check TK
-        isValid &= validation.checkEmty(tk, "tbTKNV", "Tài khoản không được để trống") && validation.checkTK(tk, "tbTKNV", "Tài khoản chỉ từ 4 -> 6 ký số") &&  validation.checkTkTrung(tk, "tbTKNV", "Tài khoản không được trùng", dsnv.mangNV);
+        isValid &= validation.checkEmty(tk, "tbTKNV", "Tài khoản không được để trống") && validation.checkTK(tk, "tbTKNV", "Tài khoản không đúng định dạng") &&  validation.checkTkTrung(tk, "tbTKNV", "Tài khoản không được trùng", dsnv.mangNV);
 
         // Ten NV
         isValid &= validation.checkEmty(hoten, "tbTen", "Tên không được để trống") && validation.checkName(hoten, "tbTen", "Tên chỉ gồm các ký tự chữ");
 
         // Email
-        isValid &= validation.checkEmty(email, "tbEmail", "Email không được để trống") && validation.checkEmail(email, "tbEmail", "Email không dúng định dạng");
+        isValid &= validation.checkEmty(email, "tbEmail", "Email không được để trống") && validation.checkEmail(email, "tbEmail", "Email không đúng định dạng");
 
         // Password
         isValid &= validation.checkEmty(matkhau, "tbMatKhau", "Mật khẩu không được để trống") && validation.checkPassword(matkhau, "tbMatKhau", "Mật khẩu chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt (6 -> 10 kí tự)");
 
         // Date
-        isValid &= validation.checkEmty(ngaylam, "tbNgay", "Ngày làm không được để trống") && validation.checkDate(ngaylam, "tbNgay", "Ngày làm không dúng định dạng");
+        isValid &= validation.checkEmty(ngaylam, "tbNgay", "Ngày làm không được để trống") && validation.checkDate(ngaylam, "tbNgay", "Ngày làm không đúng định dạng");
 
         // Luong
         isValid &= validation.checkEmty(luongcb, "tbLuongCB", "Lương cơ bản không được để trống") && validation.checkLuongCB(luongcb, "tbLuongCB", "Lương cơ bản không hợp lệ");
