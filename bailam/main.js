@@ -27,7 +27,7 @@ document.getElementById('btnThemNV').onclick =
 
         var isValid = true;
         // Check TK
-        isValid &= validation.checkEmty(tk, "tbTKNV", "Tài khoản không được để trống") && validation.checkTK(tk, "tbTKNV", "Tài khoản chỉ từ 4 -> 6 ký số");
+        isValid &= validation.checkEmty(tk, "tbTKNV", "Tài khoản không được để trống") && validation.checkTK(tk, "tbTKNV", "Tài khoản chỉ từ 4 -> 6 ký số") &&  validation.checkTkTrung(tk, "tbTKNV", "Tài khoản không được trùng", dsnv.mangNV);
 
         // Ten NV
         isValid &= validation.checkEmty(hoten, "tbTen", "Tên không được để trống") && validation.checkName(hoten, "tbTen", "Tên chỉ gồm các ký tự chữ");
